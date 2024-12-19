@@ -1,23 +1,18 @@
 WP SweetSpot
-===============
-
-Plugin Description...
-
+============
 
 Installation
 ------------
-
-### Production (using Github Updater – recommended for Multisite)
- - Install [Andy Fragen's GitHub Updater](https://github.com/afragen/github-updater) first.
- - In WP Admin go to Settings / GitHub Updater / Install Plugin. Enter `/wp-sweet-spot` as a Plugin-URI.
-
-### Using Composer
-```
-composer require /wp-sweet-spot
-```
+ - Head over to [releases](../../releases)
+ - Download 'wp-sweet-spot.zip'
+ - Install and activate it like any other WordPress plugin
+ - As long as the plugin is active, it will check for updates
 
 ### Development
- - cd into your plugin directory
- - $ `git clone `
- - $ `cd wp-sweet-spot`
- - $ `npm install && npm run dev`
+```
+cd wp-content/plugins
+git clone git@github.com:mcguffin/wp-sweet-spot.git
+cd two-factor-webauthn
+npm install
+npm run dev
+```

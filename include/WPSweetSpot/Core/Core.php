@@ -33,9 +33,7 @@ class Core extends Plugin implements CoreInterface {
 
 		$sweet_spot_x = get_post_meta( $attachment->ID,'sweet_spot_x', true );
 		$sweet_spot_y = get_post_meta( $attachment->ID,'sweet_spot_y', true );
-		if (
-			'' !== $sweet_spot_x && '' !== $sweet_spot_y
-		) {
+		if ( '' !== $sweet_spot_x && '' !== $sweet_spot_y ) {
 			$attributes = wp_parse_args( $attributes, [
 				'style' => '',
 			]);
