@@ -7,10 +7,6 @@
 
 namespace WPSweetSpot\Core;
 
-if ( ! defined('ABSPATH') ) {
-	die('FU!');
-}
-
 
 interface CoreInterface {
 

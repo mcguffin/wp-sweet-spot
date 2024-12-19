@@ -7,7 +7,7 @@
 
 namespace WPSweetSpot\Core;
 
-class Plugin extends Singleton implements ComponentInterface {
+class Plugin extends Singleton {
 
 	/** @var string plugin prefix */
 	private $plugin_prefix = 'sweet_spot';
@@ -38,7 +38,7 @@ class Plugin extends Singleton implements ComponentInterface {
 
 		add_action( 'admin_init', [ $this, 'maybe_upgrade' ] );
 
-		add_action( 'plugins_loaded' , [ $this , 'load_textdomain' ] );
+		add_action( 'init' , [ $this , 'load_textdomain' ] );
 
 		parent::__construct();
 	}

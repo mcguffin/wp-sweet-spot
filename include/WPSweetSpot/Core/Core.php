@@ -16,34 +16,42 @@ class Core extends Plugin implements CoreInterface {
 	 */
 	protected function __construct() {
 
-		add_action( 'init', [ $this, 'init' ] );
+		add_filter( 'wp_get_attachment_image_attributes', [ $this, 'add_position_style' ], 10, 2 );
 
 		add_action( 'wp_enqueue_scripts', [ $this , 'enqueue_assets' ] );
+
+		Blocks::instance();
 
 		$args = func_get_args();
 		parent::__construct( ...$args );
 	}
 
 	/**
-	 *	Load frontend styles and scripts
-	 *
-	 *	@action wp_enqueue_scripts
+	 *  @filter wp_get_attachment_image_attributes
 	 */
-	public function enqueue_assets() {
+	public function add_position_style( $attributes, $attachment ) {
+
+		$sweet_spot_x = get_post_meta( $attachment->ID,'sweet_spot_x', true );
+		$sweet_spot_y = get_post_meta( $attachment->ID,'sweet_spot_y', true );
+		if (
+			'' !== $sweet_spot_x && '' !== $sweet_spot_y
+		) {
+			$attributes = wp_parse_args( $attributes, [
+				'style' => '',
+			]);
+			$attributes['style'] .= sprintf(
+				'--sweet-spot-x:%F;--sweet-spot-y:%F;',
+				$sweet_spot_x,
+				$sweet_spot_y
+			);
+		}
+		return $attributes;
 	}
-
-
-
-
-
 
 	/**
-	 *	Init hook.
-	 *
-	 *  @action init
+	 *	@action wp_enqueue_media
 	 */
-	public function init() {
+	public function enqueue_assets() {
+		Asset\Asset::get('css/images.css')->enqueue();
 	}
-
-
 }

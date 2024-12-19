@@ -7,10 +7,6 @@
 
 namespace WPSweetSpot\Asset;
 
-if ( ! defined('ABSPATH') ) {
-	die('FU!');
-}
-
 use WPSweetSpot\Core;
 
 

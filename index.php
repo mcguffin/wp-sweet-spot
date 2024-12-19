@@ -3,7 +3,7 @@
 /*
 Plugin Name: WP SweetSpot
 Plugin URI: http://wordpress.org/
-Description: Enter description here.
+Description: Manage Image Sweet Spots
 Author: Jörn Lund
 Version: 0.0.1
 Author URI: https://github.com/mcguffin
@@ -38,6 +38,9 @@ https://github.com/mcguffin/wp-skeleton
 
 namespace WPSweetSpot;
 
+use WPSweetSpot\Admin;
+use WPSweetSpot\Core;
+
 if ( ! defined('ABSPATH') ) {
 	die('FU!');
 }
@@ -48,5 +51,5 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . 'include/autoload.php';
 Core\Core::instance( __FILE__ );
 
 if ( is_admin() || defined( 'DOING_AJAX' ) ) {
+	Admin\Attachment::instance();
 }
-
