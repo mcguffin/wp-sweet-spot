@@ -12,7 +12,7 @@ Requires WP: 4.8
 Requires PHP: 5.6
 Text Domain: wp-sweet-spot
 Domain Path: /languages/
-Update URI: https://github.com/mcguffin/wp-sweet-spot/raw/master/.wp-release-info.json
+Update URI: https://github.com/mcguffin/wp-sweet-spot/raw/main/.wp-release-info.json
 */
 
 /*  Copyright 2024 Jörn Lund

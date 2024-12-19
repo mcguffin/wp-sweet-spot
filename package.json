@@ -1,6 +1,6 @@
 {
   "name": "wp-sweet-spot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "private": true,
   "author": "Jörn Lund",
@@ -83,6 +83,7 @@
     ],
     "type": "plugin",
     "build": {
+      "versionedFiles": null,
       "prebuild": [
         "wp i18n make-pot . languages/wp-sweet-spot.pot --domain=wp-sweet-spot --exclude=tmp"
       ],

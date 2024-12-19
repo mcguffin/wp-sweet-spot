@@ -1,0 +1,9 @@
+{
+  "id": "https://github.com/mcguffin/wp-sweet-spot/raw/main/.wp-release-info.json",
+  "slug": "wp-sweet-spot",
+  "version": "0.0.1",
+  "url": "http://wordpress.org/",
+  "package": "https://github.com/mcguffin/wp-sweet-spot/releases/download/0.0.1/wp-sweet-spot.zip",
+  "tested": "4.9",
+  "requires_php": "5.3"
+}

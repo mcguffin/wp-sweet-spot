@@ -1,0 +1,1 @@
+.wp-block-gallery.is-cropped img,[style*=aspect-ratio] [style*="object-fit:cover"],[style*=aspect-ratio][style*="object-fit:cover"]{-o-object-position:calc(var(--sweet-spot-x, 0.5)*100%) calc(var(--sweet-spot-y, 0.5)*100%);object-position:calc(var(--sweet-spot-x, 0.5)*100%) calc(var(--sweet-spot-y, 0.5)*100%)}
