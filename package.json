@@ -88,7 +88,8 @@
         "wp i18n make-pot . languages/wp-sweet-spot.pot --domain=wp-sweet-spot --exclude=tmp"
       ],
       "build": [
-        "gulp build"
+        "gulp build",
+        "npm run setversion"
       ]
     },
     "git": {
