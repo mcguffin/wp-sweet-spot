@@ -1,5 +1,6 @@
 .wp-block-gallery.is-cropped img,
 [style*="aspect-ratio"] [style*="object-fit:cover"],
-[style*="aspect-ratio"][style*="object-fit:cover"] {
+[style*="aspect-ratio"][style*="object-fit:cover"],
+.wp-block-avatar img {
 	object-position: calc(var(--sweet-spot-x, 0.5) * 100%) calc(var(--sweet-spot-y, 0.5) * 100%);
 }
