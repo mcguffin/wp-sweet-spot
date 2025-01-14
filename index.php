@@ -5,7 +5,7 @@ Plugin Name: WP SweetSpot
 Plugin URI: http://wordpress.org/
 Description: Manage Image Sweet Spots
 Author: Jörn Lund
-Version: 0.0.2
+Version: 0.0.3
 Author URI: https://github.com/mcguffin
 License: GPL3
 Requires WP: 4.8
